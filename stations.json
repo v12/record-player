@@ -1,0 +1,227 @@
+{
+  "rr": {
+    "name": "Radio Record",
+    "short": "record",
+    "colors": {
+      "bg": "hsla(195, 5%, 23%, 1)",
+      "text": "hsla(195, 5%, 75%, 1)",
+      "border": "hsla(195, 5%, 50%, 0.5)"
+    }
+  },
+  "sd90": {
+    "name": "Супердискотека 90-х",
+    "short": "sd90",
+    "colors": {
+      "bg": "hsla(202, 42%, 23%, 1)",
+      "text": "hsla(202, 25%, 75%, 1)",
+      "border": "hsla(202, 25%, 40%, 0.5)"
+    }
+  },
+  "rus": {
+    "name": "Russian Mix",
+    "short": "rus",
+    "colors": {
+      "bg": "hsla(20, 42%, 23%, 1)",
+      "text": "hsla(20, 25%, 75%, 1)",
+      "border": "hsla(20, 25%, 40%, 0.5)"
+    }
+  },
+  "tm": {
+    "name": "Trancemission Radio",
+    "short": "trancemission",
+    "colors": {
+      "bg": "hsla(278, 42%, 23%, 1)",
+      "text": "hsla(278, 25%, 75%, 1)",
+      "border": "hsla(278, 25%, 40%, 0.5)"
+    }
+  },
+  "deep": {
+    "name": "Record Deep",
+    "short": "deep",
+    "colors": {
+      "bg": "hsla(252, 42%, 23%, 1)",
+      "text": "hsla(252, 25%, 90%, 1)",
+      "border": "hsla(252, 15%, 40%, 0.5)"
+    }
+  },
+  "chil": {
+    "name": "Record Chill-Out",
+    "short": "chil",
+    "colors": {
+      "bg": "hsla(28, 42%, 23%, 1)",
+      "text": "hsla(28, 25%, 75%, 1)",
+      "border": "hsla(28, 25%, 40%, 0.5)"
+    }
+  },
+  "club": {
+    "name": "Record EDM",
+    "short": "club",
+    "colors": {
+      "bg": "hsla(297, 42%, 23%, 1)",
+      "text": "hsla(297, 25%, 75%, 1)",
+      "border": "hsla(297, 25%, 40%, 0.5)"
+    }
+  },
+  "vip": {
+    "name": "Vip House",
+    "short": "vip",
+    "colors": {
+      "bg": "hsla(340, 42%, 23%, 1)",
+      "text": "hsla(340, 25%, 75%, 1)",
+      "border": "hsla(340, 25%, 40%, 0.5)"
+    }
+  },
+  "rock": {
+    "name": "Record Rock",
+    "short": "rock",
+    "colors": {
+      "bg": "hsla(0, 42%, 23%, 1)",
+      "text": "hsla(0, 25%, 90%, 1)",
+      "border": "hsla(0, 15%, 40%, 0.5)"
+    }
+  },
+  "ps": {
+    "name": "Pirate Station",
+    "short": "pirate",
+    "colors": {
+      "bg": "hsla(204, 10%, 10%, 1)",
+      "text": "hsla(204, 25%, 90%, 1)",
+      "border": "hsla(204, 10%, 20%, 0.5)"
+    }
+  },
+  "mdl": {
+    "name": "Медляк FM",
+    "short": "mdl",
+    "colors": {
+      "bg": "hsla(314, 42%, 23%, 1)",
+      "text": "hsla(314, 25%, 75%, 1)",
+      "border": "hsla(314, 25%, 40%, 0.5)"
+    }
+  },
+  "trap": {
+    "name": "Record Trap",
+    "short": "trap",
+    "colors": {
+      "bg": "hsla(7, 42%, 23%, 1)",
+      "text": "hsla(7, 25%, 90%, 1)",
+      "border": "hsla(7, 15%, 40%, 0.5)"
+    }
+  },
+  "gop": {
+    "name": "Гоп FM",
+    "short": "gopfm",
+    "colors": {
+      "bg": "hsla(192, 42%, 23%, 1)",
+      "text": "hsla(192, 25%, 75%, 1)",
+      "border": "hsla(192, 25%, 40%, 0.5)"
+    }
+  },
+  "yo": {
+    "name": "Yo! FM",
+    "short": "yo",
+    "colors": {
+      "bg": "hsla(274, 42%, 23%, 1)",
+      "text": "hsla(274, 25%, 90%, 1)",
+      "border": "hsla(274, 15%, 40%, 0.5)"
+    }
+  },
+  "brks": {
+    "name": "Record Breaks",
+    "short": "brks",
+    "colors": {
+      "bg": "hsla(107, 42%, 23%, 1)",
+      "text": "hsla(107, 25%, 90%, 1)",
+      "border": "hsla(107, 15%, 40%, 0.5)"
+    }
+  },
+  "dub": {
+    "name": "Record Dubstep",
+    "short": "dub",
+    "colors": {
+      "bg": "hsla(60, 42%, 23%, 1)",
+      "text": "hsla(60, 25%, 90%, 1)",
+      "border": "hsla(60, 15%, 40%, 0.5)"
+    }
+  },
+  "dc": {
+    "name": "Record Dancecore",
+    "short": "dancecore",
+    "colors": {
+      "bg": "hsla(18, 42%, 23%, 1)",
+      "text": "hsla(18, 25%, 90%, 1)",
+      "border": "hsla(18, 15%, 40%, 0.5)"
+    }
+  },
+  "teo": {
+    "name": "Record Hardstyle",
+    "short": "theodor",
+    "colors": {
+      "bg": "hsla(60, 42%, 23%, 1)",
+      "text": "hsla(60, 25%, 90%, 1)",
+      "border": "hsla(60, 15%, 40%, 0.5)"
+    }
+  },
+  "pump": {
+    "name": "Pump",
+    "short": "pump",
+    "colors": {
+      "bg": "hsla(43, 42%, 23%, 1)",
+      "text": "hsla(43, 25%, 90%, 1)",
+      "border": "hsla(43, 15%, 40%, 0.5)"
+    }
+  },
+  "techno": {
+    "name": "Record Techno",
+    "short": "techno",
+    "colors": {
+      "bg": "hsla(175, 42%, 23%, 1)",
+      "text": "hsla(175, 25%, 90%, 1)",
+      "border": "hsla(175, 15%, 40%, 0.5)"
+    }
+  },
+  "mix": {
+    "name": "Record Megamix",
+    "short": "mix",
+    "colors": {
+      "bg": "hsla(343, 42%, 23%, 1)",
+      "text": "hsla(343, 25%, 90%, 1)",
+      "border": "hsla(343, 15%, 40%, 0.5)"
+    }
+  },
+  "fut": {
+    "name": "Future House",
+    "short": "fut",
+    "colors": {
+      "bg": "hsla(179, 42%, 23%, 1)",
+      "text": "hsla(179, 25%, 90%, 1)",
+      "border": "hsla(179, 15%, 40%, 0.5)"
+    }
+  },
+  "mini": {
+    "name": "Minimal / Tech",
+    "short": "mini",
+    "colors": {
+      "bg": "hsla(56, 42%, 23%, 1)",
+      "text": "hsla(56, 25%, 90%, 1)",
+      "border": "hsla(56, 15%, 40%, 0.5)"
+    }
+  },
+  "rave": {
+    "name": "Rave FM",
+    "short": "rave",
+    "colors": {
+      "bg": "hsla(255, 42%, 23%, 1)",
+      "text": "hsla(255, 25%, 90%, 1)",
+      "border": "hsla(255, 15%, 40%, 0.5)"
+    }
+  },
+  "goa": {
+    "name": "GOA/PSY",
+    "short": "goa",
+    "colors": {
+      "bg": "hsla(10, 42%, 23%, 1)",
+      "text": "hsla(10, 25%, 90%, 1)",
+      "border": "hsla(10, 15%, 40%, 0.5)"
+    }
+  }
+}

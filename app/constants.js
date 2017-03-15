@@ -1,0 +1,7 @@
+module.exports = {
+  LOAD_STATIONS: 'LOAD_STATIONS',
+  SET_SOURCE: 'SET_SOURCE',
+  PLAY: 'PLAY',
+  PAUSE: 'PAUSE',
+  PLAY_PAUSE: 'PLAY_PAUSE'
+}

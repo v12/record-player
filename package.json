@@ -1,0 +1,23 @@
+{
+  "name": "radio-record-player",
+  "version": "0.0.1",
+  "description": "Radio Record player based on Electron",
+  "main": "electron.js",
+  "repository": "https://github.com/v12/record-player.git",
+  "author": "Nikita Khomyakov <dr.evil@krtn.eu> (https://krtn.eu)",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.6.1",
+    "jquery": "^3.1.1",
+    "menubar": "^5.2.3",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.8.2",
+    "redux-saga": "^0.14.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.0",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1"
+  }
+}
