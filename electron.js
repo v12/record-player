@@ -1,6 +1,5 @@
 'use strict'
 
-const { ipcMain } = require('electron')
 const path = require('path')
 const menubar = require('menubar')
 
@@ -17,7 +16,4 @@ mb.on('ready', function ready () {
 
 mb.on('after-create-window', () => {
   mb.window.openDevTools({ detach: true })
-  ipcMain.on('get-stations', (event) => {
-    event.sender.send('stations', { test: { obj: true } })
-  })
 })
