@@ -6,6 +6,7 @@ const menubar = require('menubar')
 
 const mb = menubar({
   dir: path.join(__dirname, 'app'),
+  icon: path.join('assets', 'icon.ico'), // todo load PNG version on OS X
   tooltip: 'Readio Record',
   preloadWindow: true
 })
