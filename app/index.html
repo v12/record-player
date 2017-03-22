@@ -57,13 +57,23 @@
       left: 16px;
       top: 16px;
     }
-    .play.active::before, .play.active::after {
+    .active .play::before, .active .play::after {
       border-width: 0 0 0 12px;
       height: 32px;
     }
-    .play.active::after {
+    .active .play::after {
       left: 18px;
       top: 8px;
+    }
+
+    #player {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      background: #fac;
     }
   </style>
 </head>
@@ -71,7 +81,7 @@
 <div id="stations"></div>
 
 <div id="player">
-  <button class="play-pause">play/pause</button> <span class="current-track">n/a</span>
+  <button class="play-pause">play/pause</button> <span class="current-source">n/a</span>
 </div>
 
 <script src="./index.js"></script>

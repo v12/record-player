@@ -1,5 +1,6 @@
 'use strict'
 
+const { globalShortcut } = require('electron')
 const path = require('path')
 const menubar = require('menubar')
 
@@ -16,4 +17,13 @@ mb.on('ready', function ready () {
 
 mb.on('after-create-window', () => {
   mb.window.openDevTools({ detach: true })
+
+  globalShortcut.register(
+    'MediaPlayPause',
+    () => mb.window.webContents.send('media-key', 'play-pause')
+  )
+})
+
+mb.app.on('will-quit', () => {
+  globalShortcut.unregisterAll()
 })

@@ -18,7 +18,9 @@ const stations = (state = {}, { type, payload }) => {
   return state
 }
 
-const nowPlaying = (state = null, { type, payload }) => {
+const activeStation = (state = null, { type, payload }) => {
+  if (type === actionTypes.SET_ACTIVE_STATION) return payload
+
   return state
 }
 
@@ -36,6 +38,7 @@ const isPlaying = (state = false, { type, payload }) => {
     case 'player/e/PAUSE':
     case 'player/e/WAITING':
     case 'player/e/STALLED':
+    case 'player/e/ERROR':
       return false
 
     default:
@@ -44,7 +47,7 @@ const isPlaying = (state = false, { type, payload }) => {
 }
 
 module.exports = {
-  nowPlaying,
+  activeStation,
   isPlaying,
   source,
   stations

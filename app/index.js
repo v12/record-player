@@ -2,7 +2,7 @@
 
 const $ = require('jquery')
 
-const { loadStations, playPause } = require('./actions')
+const { loadStations, setActiveStation, playPause } = require('./actions')
 const store = require('./store')()
 
 const tpl = station => `
@@ -18,12 +18,21 @@ const tpl = station => `
 
 const $root = $('#stations')
 
-let stations
-store.subscribe(() => {
-  let prevStations = stations
-  stations = store.getState().stations
+const $player = $('#player')
 
-  if (prevStations !== stations) {
+$player.find('.play-pause').on('click', (e) => {
+  e.preventDefault()
+
+  store.dispatch(playPause())
+})
+
+let prevState = {}
+store.subscribe(() => {
+  const state = store.getState()
+
+  const { stations, source, isPlaying } = state
+
+  if (prevState.stations !== stations) {
     console.log('Stations list updated - rendering')
 
     $root.empty()
@@ -38,19 +47,34 @@ store.subscribe(() => {
         'border-bottom': '3px solid'
       })
 
+      $station.attr('data-station-id', station.short)
+
       $station.find('.play').on('click', function (e) {
         e.preventDefault()
 
-        $('#stations').find(' .play').removeClass('active')
-        const $el = $(this)
-        $el.addClass('active')
-
+        store.dispatch(setActiveStation(station.short))
         store.dispatch(playPause(station.links.hq))
       })
 
       $root.append($station)
     })
   }
+
+  if (prevState.isPlaying !== isPlaying) {
+    if (!isPlaying) {
+      $root.find('.station.active').removeClass('active')
+    } else {
+      $root.find(`.station[data-station-id='${state.activeStation}']`).addClass('active')
+    }
+
+    $player.find('.play-pause').html(state.isPlaying ? '&#10074;&#10074;' : '&#9658;')
+  }
+
+  if (prevState.source !== source) {
+    $player.find('.current-source').text(source)
+  }
+
+  prevState = state
 })
 
 store.dispatch(loadStations())
