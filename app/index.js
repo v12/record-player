@@ -42,8 +42,7 @@ store.subscribe(() => {
       $station.css({
         color: station.colors.text,
         'background-color': station.colors.bg,
-        'border-color': station.colors.border,
-        'border-bottom': '3px solid'
+        'border-color': station.colors.border
       })
 
       $station.attr('data-station-id', station.short)

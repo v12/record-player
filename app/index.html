@@ -11,6 +11,7 @@
 
     body {
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 14px;
       margin: 0;
     }
 
@@ -23,7 +24,7 @@
       line-height: 40px;
       background: #000;
       color: #fff;
-      font-size: 0.8em;
+      font-size: 0.8rem;
       border-top: 4px solid gray;
     }
 
@@ -41,19 +42,23 @@
 
     .station {
       cursor: pointer;
-
       padding: 0 10px;
-      height: 48px;
+      height: 32px;
+      border-bottom: 3px solid;
+    }
+
+    .station:last-child {
+      border-bottom: 0;
     }
 
     .title {
-      line-height: 48px;
+      line-height: 32px;
     }
 
     .play-wrapper {
-      padding: 0 10px 0 0;
+      padding: 4px 10px 4px 0;
       float: left;
-      height: 48px;
+      height: 24px;
     }
 
     .play {
@@ -61,8 +66,8 @@
       display: block;
       background: transparent;
       border: 0;
-      width: 32px;
-      height: 48px;
+      width: 16px;
+      height: 24px;
     }
 
     .play::before, .play::after {
@@ -70,9 +75,9 @@
       display: block;
       position: absolute;
       left: 0;
-      top: 8px;
-      border: 8px solid transparent;
-      border-left: 16px solid #eee;
+      top: 4px;
+      border: 4px solid transparent;
+      border-left: 8px solid #eee;
       border-right-width: 0;
       width: 0;
       height: 0;
@@ -84,22 +89,22 @@
     }
 
     .play::before {
-      height: 16px;
+      height: 8px;
     }
 
     .play::after {
-      left: 16px;
-      top: 16px;
+      left: 8px;
+      top: 8px;
     }
 
     .active .play::before, .active .play::after {
-      border-width: 0 0 0 12px;
-      height: 32px;
+      border-width: 0 0 0 6px;
+      height: 16px;
     }
 
     .active .play::after {
-      left: 18px;
-      top: 8px;
+      left: 9px;
+      top: 4px;
     }
   </style>
 </head>
