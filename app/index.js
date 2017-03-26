@@ -8,7 +8,7 @@ const store = require('./store')()
 const tpl = station => `
 <div class="station">
   <div class="play-wrapper">
-    <button class="play" />
+    <a class="play" href="#" />
   </div>
   <div class="title">
     ${station.name}
@@ -49,7 +49,7 @@ store.subscribe(() => {
 
       $station.attr('data-station-id', station.short)
 
-      $station.find('.play').on('click', function (e) {
+      $station.on('click', function (e) {
         e.preventDefault()
 
         store.dispatch(setActiveStation(station.short))
