@@ -46,9 +46,18 @@ const isPlaying = (state = false, { type, payload }) => {
   }
 }
 
+const getActiveStation = state => state.activeStation
+const getIsPlaying = state => state.isPlaying
+const getSource = state => state.source
+const getStations = state => state.stations
+
 module.exports = {
   activeStation,
   isPlaying,
   source,
-  stations
+  stations,
+  getActiveStation,
+  getIsPlaying,
+  getSource,
+  getStations
 }

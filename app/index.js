@@ -3,6 +3,7 @@
 const $ = require('jquery')
 
 const { loadStations, setActiveStation, playPause } = require('./actions')
+const { getStations, getIsPlaying, getSource } = require('./reducers')
 const store = require('./store')()
 
 const tpl = station => `
@@ -30,14 +31,12 @@ let prevState = {}
 store.subscribe(() => {
   const state = store.getState()
 
-  const { stations, source, isPlaying } = state
-
-  if (prevState.stations !== stations) {
+  if (getStations(prevState) !== getStations(state)) {
     console.log('Stations list updated - rendering')
 
     $root.empty()
 
-    stations.forEach(station => {
+    getStations(state).forEach(station => {
       const $station = $(tpl(station))
 
       $station.css({
@@ -60,8 +59,8 @@ store.subscribe(() => {
     })
   }
 
-  if (prevState.isPlaying !== isPlaying) {
-    if (!isPlaying) {
+  if (getIsPlaying(prevState) !== getIsPlaying(state)) {
+    if (!getIsPlaying(state)) {
       $root.find('.station.active').removeClass('active')
     } else {
       $root.find(`.station[data-station-id='${state.activeStation}']`).addClass('active')
@@ -70,8 +69,8 @@ store.subscribe(() => {
     $player.find('.play-pause').html(state.isPlaying ? '&#10074;&#10074;' : '&#9658;')
   }
 
-  if (prevState.source !== source) {
-    $player.find('.current-source').text(source)
+  if (getSource(prevState) !== getSource(state)) {
+    $player.find('.current-source').text(getSource(state))
   }
 
   prevState = state
