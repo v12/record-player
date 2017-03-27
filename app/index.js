@@ -11,8 +11,27 @@ const tpl = station => `
   <div class="play-wrapper">
     <a class="play" href="#" />
   </div>
+  
   <div class="title">
     ${station.name}
+  </div>
+  
+  <div class="equaliser-container">
+    <ol class="equaliser-column">
+      <li class="colour-bar"></li>
+    </ol>
+    <ol class="equaliser-column">
+      <li class="colour-bar"></li>
+    </ol>
+    <ol class="equaliser-column">
+      <li class="colour-bar"></li>
+    </ol>
+    <ol class="equaliser-column">
+      <li class="colour-bar"></li>
+    </ol>
+    <ol class="equaliser-column">
+      <li class="colour-bar"></li>
+    </ol>
   </div>
 </div>
 `

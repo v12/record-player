@@ -30,7 +30,6 @@
 
     #playback-error {
       padding: 10px;
-
       background: #f04124;
       color: #fff;
     }
@@ -48,6 +47,7 @@
     }
 
     .station {
+      display: flex;
       cursor: pointer;
       padding: 0 10px;
       height: 32px;
@@ -59,6 +59,7 @@
     }
 
     .title {
+      flex: 1;
       line-height: 32px;
     }
 
@@ -112,6 +113,121 @@
     .active .play::after {
       left: 9px;
       top: 4px;
+    }
+  </style>
+
+  <!--
+  Copyright (c) 2017 by Siddharth (http://codepen.io/sidjain26/pen/pyRvGM)
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+  <style>
+    .station.active .equaliser-container {
+      display: block;
+    }
+
+    .equaliser-container {
+      display: none;
+
+      height: 35px;
+      width: 20px;
+      margin: 0 0;
+      padding: 0 0 0 0;
+      position: relative;
+    }
+
+    .colour-bar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 10px;
+      background: #999797;
+    }
+
+    .equaliser-column {
+      width: 2px;
+      float: left;
+      margin: 12.5px 1px 0 0;
+      padding: 0;
+      height: 10px;
+      position: relative;
+      list-style-type: none;
+    }
+
+    .equaliser-column:nth-child(1) .colour-bar {
+      animation: color-bar 2s 1s ease-out alternate infinite;
+    }
+
+    .equaliser-column:nth-child(2) .colour-bar {
+      animation: color-bar 2s 0.5s ease-out alternate infinite;
+    }
+
+    .equaliser-column:nth-child(3) .colour-bar {
+      animation: color-bar 2s 1.5s ease-out alternate infinite;
+    }
+
+    .equaliser-column:nth-child(4) .colour-bar {
+      animation: color-bar 2s 0.25s ease-out alternate infinite;
+    }
+
+    .equaliser-column:nth-child(5) .colour-bar {
+      animation: color-bar 2s 2s ease-out alternate infinite;
+    }
+
+    .equaliser-column:last-child {
+      margin-right: 0;
+    }
+
+    @keyframes color-bar {
+      0% {
+        height: 1px;
+        background: #999797;
+      }
+      10% {
+        height: 3px;
+        background: #999797;
+      }
+      20% {
+        height: 5px;
+        background: #999797;
+      }
+      30% {
+        height: 2px;
+        background: #999797;
+      }
+      40% {
+        height: 7px;
+        background: #999797;
+      }
+      50% {
+        height: 9px;
+        background: #999797;
+      }
+      60% {
+        height: 3px;
+        background: #999797;
+      }
+      70% {
+        height: 8px;
+        background: #999797;
+      }
+      80% {
+        height: 5px;
+        background: #999797;
+      }
+      90% {
+        height: 3px;
+        background: #999797;
+      }
+      100% {
+        height: 1px;
+        background: #999797;
+      }
     }
   </style>
 </head>
