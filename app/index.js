@@ -3,7 +3,7 @@
 const $ = require('jquery')
 
 const { loadStations, setActiveStation, playPause } = require('./actions')
-const { getStations, getIsPlaying, getSource } = require('./reducers')
+const { getStations, getIsPlaying, getSource, getPlaybackError } = require('./reducers')
 const store = require('./store')()
 
 const tpl = station => `
@@ -70,6 +70,20 @@ store.subscribe(() => {
 
   if (getSource(prevState) !== getSource(state)) {
     $player.find('.current-source').text(getSource(state))
+  }
+
+  if (getPlaybackError(prevState) !== getPlaybackError(state)) {
+    const $error = $('#playback-error')
+
+    const error = getPlaybackError(state)
+    if (!error) {
+      $error.hide()
+    } else {
+      const { code, message } = error
+      $error.find('.code').text(code)
+      $error.find('.message').text(message)
+      $error.show()
+    }
   }
 
   prevState = state

@@ -30,15 +30,15 @@ const source = (state = null, { type, payload }) => {
   return state
 }
 
-const isPlaying = (state = false, { type, payload }) => {
+const isPlaying = (state = false, { type }) => {
   switch (type) {
-    case 'player/e/PLAY':
-    case 'player/e/PLAYING':
+    case actionTypes.PLAYER_EVENT_PLAY:
+    case actionTypes.PLAYER_EVENT_PLAYING:
       return true
-    case 'player/e/PAUSE':
-    case 'player/e/WAITING':
-    case 'player/e/STALLED':
-    case 'player/e/ERROR':
+    case actionTypes.PLAYER_EVENT_PAUSE:
+    case actionTypes.PLAYER_EVENT_WAITING:
+    case actionTypes.PLAYER_EVENT_STALLED:
+    case actionTypes.PLAYER_EVENT_ERROR:
       return false
 
     default:
@@ -46,18 +46,29 @@ const isPlaying = (state = false, { type, payload }) => {
   }
 }
 
+const playbackError = (state = null, { type, payload }) => {
+  if (type === actionTypes.RESET_PLAYBACK_ERROR) return null
+
+  if (type === actionTypes.SET_PLAYBACK_ERROR) return payload
+
+  return state
+}
+
 const getActiveStation = state => state.activeStation
 const getIsPlaying = state => state.isPlaying
 const getSource = state => state.source
 const getStations = state => state.stations
+const getPlaybackError = state => state.playbackError
 
 module.exports = {
   activeStation,
   isPlaying,
   source,
   stations,
+  playbackError,
   getActiveStation,
   getIsPlaying,
   getSource,
-  getStations
+  getStations,
+  getPlaybackError
 }
