@@ -1,0 +1,11 @@
+{
+  "appId": "eu.krtn.record-player",
+  "productName": "Radio Record Player",
+  "compression": "maximum",
+  "win": {
+    "icon": "assets/icon.ico"
+  },
+  "nsis": {
+    "deleteAppDataOnUninstall": true
+  }
+}
